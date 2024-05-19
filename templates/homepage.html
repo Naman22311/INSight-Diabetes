@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Detector</title>
+    <style>
+        /* Flash message styling */
+        .alert {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .alert-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .alert-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .alert-warning {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        body {
+            background-color: black;
+            color: orange;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 50px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-container {
+            border: 1px solid orange;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: orange;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff8c00;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            resize: vertical;
+            border-radius: 5px;
+            border: 1px solid orange;
+            background-color: rgba(255, 165, 0, 0.1);
+            color: orange;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: orange;
+            background-color: rgba(255, 165, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Diabetes Detector</h1>
+        <div class="checkbox-container">
+            <h2>Choose all that apply:</h2>
+            <form id="diabetesForm" action="/search" method="post">
+                <label><input type="checkbox" name="symptom" value="Waist Circumference of 32” to 40"> Waist Circumference of 32” to 40” </label>
+                <label><input type="checkbox" name="symptom" value="Elevated Triglycerides greater than or equal to 150 mg/dL or on medication to treat hypertriglyceridemia"> Elevated Triglycerides greater than or equal to 150 mg/dL or on medication to treat hypertriglyceridemia</label>
+                <label><input type="checkbox" name="symptom" value="Reduced HDL less than 40 mg/dL in males or less than 50 mg/dL in females"> Reduced HDL less than 40 mg/dL in males or less than 50 mg/dL in females</label>
+                <label><input type="checkbox" name="symptom" value="Elevated Blood Pressure greater than or equal to 130 mm Hg systolic or greater than or equal to 85 mm Hg diastolic or on antihypertensive medication"> Elevated Blood Pressure greater than or equal to 130 mm Hg systolic or greater than or equal to 85 mm Hg diastolic or on antihypertensive medication</label>
+                <label><input type="checkbox" name="symptom" value="Elevated Fasting Glucose greater than or equal to 100 mg/dL or on a glucose-lowering agent"> Elevated Fasting Glucose greater than or equal to 100 mg/dL or on a glucose-lowering agent</label>
+        </div>
+        <h3>Insert your INS gene sequence:</h3>
+        <textarea name="insGeneSequence" rows="4" placeholder="Insert your INS gene sequence here..."></textarea>
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

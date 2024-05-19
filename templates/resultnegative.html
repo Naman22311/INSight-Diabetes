@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        .alert {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .alert-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .alert-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .alert-warning {
+            background-color: #ffc107;
+            color: black;
+        }
+        body {
+            background-color: black;
+            color: orange;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .symptoms {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction Result</h1>
+        
+        <div class="symptoms">
+            <h2>Your Symptoms:</h2>
+            <ul>
+                {% if selected_symptoms %}
+                    {% for symptom in selected_symptoms %}
+                        <li>{{ symptom }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li>No symptoms were chosen.</li>
+                {% endif %}
+            </ul>
+        </div>
+        
+
+        <div class="result">
+            {% if selected_symptoms %}
+                <p>You may have diabetes according to your symptoms. You dont have diabetes according to our data.</p>
+            {% else %}
+                <p>You may not have diabetic according to your symptoms. You dont have diabetes according to our data.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
