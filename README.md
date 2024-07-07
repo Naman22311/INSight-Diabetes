@@ -1,10 +1,6 @@
 INSight Diabetes
 
-Team INSight Diabetes
-
-July 7, 2024
-
-Project Overview
+Project Overview:    July 7, 2024
 
 - Guide: Mr. Tavpritesh Sethi
 - Team Size: 7
