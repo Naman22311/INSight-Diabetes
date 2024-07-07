@@ -24,19 +24,24 @@ How to Run the Project
 
 1. Clone the repository from GitHub:
 
-git clone https :// github .com/your − repo/INSight − Diabetes . git
+    git clone https :// github .com/your − repo/INSight − Diabetes . git
 
-2. Navigate to the project directory: cd INSight − Diabetes
-2. Install the required dependencies:
+2. Navigate to the project directory:
+    cd INSight − Diabetes
+   
+3. Install the required dependencies:
 
-pip install − r requirements . txt
+    pip install − r requirements . txt
 
 4. Set your email for Entrez:
 
-Entrez . email = ”your email@example .com”![](Aspose.Words.6a0b8ea4-df73-4585-9a34-b0f82d19d802.001.png)
+    Entrez . email = ”your email@example .com”![](Aspose.Words.6a0b8ea4-df73-4585-9a34-b0f82d19d802.001.png)
 
 5. Run the Flask application: python app.py
-5. Open a web browser and navigate to: http ://127.0.0.1:5000/
+   
+6. Open a web browser and navigate to:
+   
+    http ://127.0.0.1:5000/
 
 Project Structure
 
@@ -54,5 +59,4 @@ Home Page:
 
 Results Page:
 
-1\. Displays whether the user is at risk of type 2 diabetes based on the input gene sequence and selected symptoms.
-2
+Displays whether the user is at risk of type 2 diabetes based on the input gene sequence and selected symptoms.
