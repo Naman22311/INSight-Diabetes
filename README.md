@@ -1,4 +1,4 @@
-                                                                                          INSight Diabetes
+INSight Diabetes
 This repository contains the code for INSight Diabetes, a web application designed to predict the
 potential risk of type 2 diabetes by analyzing SNPs in the input gene sequence.
 
