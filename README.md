@@ -1,4 +1,4 @@
-INSight Diabetes
+# INSight Diabetes
 
 Project Overview:    July 7, 2024
 
@@ -20,24 +20,27 @@ How to Run the Project
 
 1. Clone the repository from GitHub:
 
-    git clone https :// github .com/your − repo/INSight − Diabetes . git
-
-2. Navigate to the project directory:
-    cd INSight − Diabetes
+        git clone https :// github .com/your − repo/INSight − Diabetes . git
    
+2. Navigate to the project directory:
+
+        cd INSight−Diabetes
+
 3. Install the required dependencies:
 
-    pip install − r requirements . txt
+       pip install − r requirements . txt
 
 4. Set your email for Entrez:
 
-    Entrez . email = ”your email@example .com”![](Aspose.Words.6a0b8ea4-df73-4585-9a34-b0f82d19d802.001.png)
+        Entrez . email = "youremail@example.com"
 
-5. Run the Flask application: python app.py
+6. Run the Flask application:
+
+        python app.py
    
-6. Open a web browser and navigate to:
+8. Open a web browser and navigate to:
    
-    http ://127.0.0.1:5000/
+        http ://127.0.0.1:5000/
 
 Project Structure
 
