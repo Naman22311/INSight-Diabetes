@@ -32,7 +32,7 @@ How to Run the Project
 
 4. Set your email for Entrez:
 
-        Entrez . email = ”your email@example .com”![](Aspose.Words.6a0b8ea4-df73-4585-9a34-b0f82d19d802.001.png)
+        Entrez . email = "youremail@example.com"
 
 6. Run the Flask application: python app.py
 
