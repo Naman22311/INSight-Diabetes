@@ -34,9 +34,9 @@ How to Run the Project
 
         Entrez . email = "youremail@example.com"
 
-6. Run the Flask application: python app.py
+6. Run the Flask application:
 
-        app.py
+        python app.py
    
 8. Open a web browser and navigate to:
    
