@@ -3,6 +3,7 @@
 Project Overview:    July 7, 2024
 
 - Guide: Mr. Tavpritesh Sethi
+
 - Tech Stack: Python, Biopython, Flask, HTML, CSS
 - Project Duration: April 24 - May 24
 
