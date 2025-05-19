@@ -1,60 +1,99 @@
-# INSight Diabetes
+# 🧬 INSight Diabetes
 
-Project Overview:    July 7, 2024
+**INSight Diabetes** is a **Flask-based web application** designed to predict the potential risk of **type 2 diabetes** by analyzing **Single Nucleotide Polymorphisms (SNPs)** in user-provided gene sequences. Leveraging data from **NCBI** and **ClinVar** databases, it offers a user-friendly interface for gene sequence analysis and risk assessment.
 
-- Guide: Mr. Tavpritesh Sethi
-- Tech Stack: Python, Biopython, Flask, HTML, CSS
-- Project Duration: April 24 - May 24
+📅 **Project Overview**  
+- **Guide**: Mr. Tavpritesh Sethi  
+- **Duration**: April 24, 2024 - May 24, 2024  
+- **Last Updated**: July 7, 2024  
 
-INSight Diabetes is a web application designed to predict the potential risk of type 2 diabetes by analyzing Single Nucleotide Polymorphisms (SNPs) in the input gene sequence. The application collects and utilizes gene sequence data from NCBI and ClinVar databases.
+---
 
-Features
+## 🚀 Features
 
-- Implemented a web interface to input and analyze gene sequences.
-- Integrated SNP detection in gene sequences.
-- Utilized NCBI and ClinVar databases to collect gene sequence data.
-- Provided feedback based on detected SNPs and user-reported symptoms.
+- **Gene Sequence Input** 🧪: User-friendly interface to input and analyze INS gene sequences.  
+- **SNP Detection** 🔍: Identifies Single Nucleotide Polymorphisms in gene sequences.  
+- **Database Integration** 🌐: Fetches gene sequence data from NCBI and ClinVar.  
+- **Risk Assessment** 📊: Provides feedback on type 2 diabetes risk based on SNPs and user-reported symptoms.  
 
-How to Run the Project
+---
 
-1. Clone the repository from GitHub:
+## 🧠 Tech Stack
 
-        git clone https :// github .com/your − repo/INSight − Diabetes . git
-   
-2. Navigate to the project directory:
+| **Layer**            | **Technology**           |  
+|-----------------------|--------------------------|  
+| **Backend**           | Flask, Python, Biopython |  
+| **Frontend**          | HTML, CSS                |  
+| **Database**          | NCBI, ClinVar (external) |  
 
-        cd INSight−Diabetes
+---
 
-3. Install the required dependencies:
+## 📁 Project Structure
 
-       pip install − r requirements . txt
+```
+INSight-Diabetes
+├── templates/                 # HTML templates for frontend
+│   ├── index.html            # Home page for gene sequence input
+│   ├── results.html          # Results page for risk assessment
+├── static/                   # Static assets
+│   ├── css/                  # CSS styles
+│   ├── js/                   # JavaScript files
+├── app.py                    # Main Flask application
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+```
 
-4. Set your email for Entrez:
+---
 
-        Entrez . email = "youremail@example.com"
+## ✅ Prerequisites
 
-6. Run the Flask application:
+Ensure the following are installed on your system:  
+- 🐍 Python 3.8+  
+- 📦 Flask  
+- 🧬 Biopython  
+- 📜 Other dependencies listed in `requirements.txt`  
 
-        python app.py
-   
-8. Open a web browser and navigate to:
-   
-        http ://127.0.0.1:5000/
+---
 
-Project Structure
+## 📦 Installation & Running Locally
 
-- app.py : Main Flask application file.
-- templates/ : Directory containing HTML templates.
-- static/ : Directory containing static files (CSS, JS, etc.).
-- requirements.txt : List of required Python packages.
+Follow these steps to set up and run the project on your machine:
 
-Usage
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Naman22311/INSight-Diabetes
+cd INSight-Diabetes
+```
 
-Home Page:
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-1. Enter the INS gene sequence in the provided text area.
-1. Select the symptoms that apply to the user.
+### 3. Configure Entrez Email
+Set your email for NCBI's Entrez API in `app.py`:  
+```python
+Entrez.email = "youremail@example.com"
+```
 
-Results Page:
+### 4. Run the Application
+```bash
+python app.py
+```
 
-Displays whether the user is at risk of type 2 diabetes based on the input gene sequence and selected symptoms.
+### 5. Access the Application
+Open a web browser and navigate to:  
+🌐 `http://127.0.0.1:5000/`
+
+---
+
+## 🖥 Usage
+
+### Home Page
+1. **Input Gene Sequence** 🧬: Enter the INS gene sequence in the provided text area.  
+2. **Select Symptoms** ✅: Choose applicable symptoms from the provided options.  
+
+### Results Page
+- **Risk Assessment** 📈: Displays the risk of type 2 diabetes based on detected SNPs and selected symptoms.  
+
+---
